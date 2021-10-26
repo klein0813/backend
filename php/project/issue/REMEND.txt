@@ -1,0 +1,8 @@
+文件命名规则：
+n-name-num-num-num.pos
+n: 第几个问题
+name: 问题名
+num:是否解决
+num:是否明了原因
+num:是否有深入
+pos:文件类型

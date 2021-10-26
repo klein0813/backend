@@ -1,0 +1,23 @@
+import calendar
+# 返回一个月是多少天(一周的第几天,多少天)
+print(calendar.monthrange(2019,6))   # (5, 30)
+
+
+import datetime
+current_date = datetime.datetime.now()
+year = current_date.year
+month = current_date.month
+day = current_date.day
+ 
+ 
+print(current_date) # 2019-07-16 15:13:25.441199
+print(year) # 2019
+print(month) # 7
+
+
+import time
+
+time = time.time()
+print(time) #时间戳：1563261205.4411995
+ts = str(time.strftime('%Y-%m-%d_%H-%M-%S',time.localtime(time.time())))
+print ts     #2019-11-11_17-58-20

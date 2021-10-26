@@ -1,0 +1,14 @@
+关键词：echo 返回值
+
+issue概述：
+1. 调用API，返回值 的末尾被拼接了 一个空行 + Internal Server Error
+2. 下载文件，文件Internal Server Error
+
+问题点：
+均使用echo输入数据给前台
+
+issue原因：未知
+
+解决方式：
+1. 换用return
+2. 使用Yii::$app->response->sendContentAsFile($content, $downloadName, ['mimeType' => 'text/html']) 替换原有方式(echo content)

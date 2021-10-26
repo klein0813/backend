@@ -1,0 +1,2 @@
+json输出汉字
+json_encode($newArray, JSON_UNESCAPED_UNICODE)
