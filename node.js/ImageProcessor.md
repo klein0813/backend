@@ -1,30 +1,32 @@
 # Image Processor
 
 ## Repo
+
 - images // 图像编解码库
 - get-pixels // 获取图像像素
 - gka // 是一款简单的、高效的帧动画生成工具，图片处理工具
 
 ## Compress
+
 - <https://docsmall.com/image-compress>
 - <https://tinypng.com/>
 
 ## Resize
+
 ```js
-images('./Characters-127.png')
-  .resize(409)
-  .save('Characters-127-409.png', {
-    quality: 100
-  }) 
+images('./Characters-127.png').resize(409).save('Characters-127-409.png', {
+  quality: 100,
+})
 ```
 
 ## Combine
+
 ```js
 images(`bg_max_compress-0.png`)
   .draw(images(`Sapporo_Characters_12fps-0.png`), 0, 0)
   .save(`output-000.png`, {
-    quality : 100
-  });
+    quality: 100,
+  })
 ```
 
 ## Generate Sprites

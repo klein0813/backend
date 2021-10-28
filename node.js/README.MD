@@ -7,7 +7,7 @@
 - renameSync - 文件重命名
 
 ```js
-fs.renameSync(`${targetDir}/${files[i]}`, `${dist}/${files[i]}`);
+fs.renameSync(`${targetDir}/${files[i]}`, `${dist}/${files[i]}`)
 ```
 
 - unlinkSync - 删除文件或符号链接
@@ -26,7 +26,7 @@ fs.mkdirSync(distPath)
 
 ```js
 const secDirs = fs.readdirSync(`${root}/${dirs[i]}`)
-for (let j = 0; j < secDirs.length; j++) {}
+for (let j = 0; j < secDirs.length; j++) {}
 ```
 
 - existsSync - 路径是否存在
@@ -40,16 +40,16 @@ fs.existsSync(distDir)
 - 执行 node 脚本
 
 ```js
-  exec('node sprite-generator.js', function(err, stdout, stderr) {
-    err && console.log(err)
-    stdout && console.log(stdout)
-  })
+exec('node sprite-generator.js', function (err, stdout, stderr) {
+  err && console.log(err)
+  stdout && console.log(stdout)
+})
 ```
 
 - 文件重命名
 
 ```js
-fs.renameSync(`${targetDir}/${files[i]}`, `${dist}/${files[i]}`);
+fs.renameSync(`${targetDir}/${files[i]}`, `${dist}/${files[i]}`)
 ```
 
 - 删除文件夹
@@ -63,7 +63,7 @@ function delFile(path, reservePath) {
     if (fs.statSync(path).isDirectory()) {
       let files = fs.readdirSync(path)
       files.forEach((file, index) => {
-        let currentPath = path + "/" + file
+        let currentPath = path + '/' + file
         if (fs.statSync(currentPath).isDirectory()) {
           delFile(currentPath, reservePath)
         } else {
@@ -85,3 +85,8 @@ function delFile(path, reservePath) {
 ```js
 fs.statSync(path).isDirectory()
 ```
+
+## Debug
+
+- node inspect
+  --node --inspect-brk index.js
